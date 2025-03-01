@@ -1,0 +1,13 @@
+server:
+  port: 8888  # Default port for Spring Cloud Config Server
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Arunjay22/buy-nest-config-files.git
+          search-paths: '{application}'  # Optional: Search for config files in subdirectories
+          clone-on-start: true  # Clone the repo on startup
